@@ -46,3 +46,8 @@ Utilisation de l'application
 1. Ajouter un utilisateur
 2. Ajouter un chantier
 3. affecter un pointage pour un utilisateur a un chantier ben définies.
+
+
+Régles de gestion
+1.Vous nous pouvez pas supprimer un utilisateur ou bien un chantier s'il est précedement affecté a un chantier.
+2.un utilisateur ne peut pas etre affecter   a un chantier deux fois  le meme jour
