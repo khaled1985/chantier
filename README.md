@@ -3,7 +3,7 @@ PHP 7.2.
 Composer
 Symfony 4 
 
-Contenu du proet
+Contenu du projet
 
 1. Une page utilisateurs permettra les actions basiques du CRUD. Un utilisateur est composé des
 informations suivantes :
@@ -39,3 +39,10 @@ Installation and configuration:
 7. Exécutez la commande   php bin/console doctrine:migrations:migrate   pour migrer et créer les entités dans la base de données
 8. Ouvrir le projet dans la navigateur on saisissant le lien http://localhost:8000
 9. Exploitez les fonctionnalités 
+
+
+
+Utilisation de l'application
+1. Ajouter un utilisateur
+2. Ajouter un chantier
+3. affecter un pointage pour un utilisateur a un chantier ben définies.
