@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass=PointagesRepository::class)
  * @UniqueEntity(
- *     fields={"utilisateur", "chantier"},
+ *     fields={"utilisateur", "chantier", "Date"},
   
  *     message="Un utilisateur ne peut pas être pointé deux fois le même jour sur le même chantier.."
  * )
@@ -30,7 +30,7 @@ class Pointages
     private $utilisateur;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Chantiers::class, inversedBy="date")
+     * @ORM\ManyToOne(targetEntity=Chantiers::class)
      */
     private $chantier;
 

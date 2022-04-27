@@ -25,7 +25,7 @@
 	 
 
 	<tbody>
-{% if properties %}
+{% if properties is not empty%}
  {% for chantier in properties%}
  	<tr id="{{chantier.Id}}" >
 <td >{{chantier.nom}} </td>

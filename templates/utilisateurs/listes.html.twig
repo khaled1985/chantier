@@ -25,7 +25,7 @@
 	 
 
 	<tbody>
-{% if properties %}
+{% if properties is not empty%}
  {% for etudiant in properties%}
  	<tr id="{{etudiant.Id}}" >
 <td >{{etudiant.nom}} </td>

@@ -55,7 +55,7 @@ class PointagesController extends AbstractController
  
      
     'choice_label' =>function ($chantier) {
-        return $chantier->getNom() . ';' . $chantier->getDateDebut()->format('d/m/Y');
+        return $chantier->getNom() ;
     },
     
 ])
