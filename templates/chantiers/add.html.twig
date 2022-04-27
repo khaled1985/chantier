@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+ 
+ {% form_theme formchantiers 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+
+
+    {% for message in app.flashes('succes') %}
+   <div class="col-md-12">
+     <div class="alert alert-success alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        {{ message }}
+    </div>
+   </div>
+{% endfor %}
+
+
+
+<div class="example-wrapper col-10">
+    {{form_start(formchantiers)}}
+    {{form_row(formchantiers.nom)}} 
+    {{form_row(formchantiers.adresse)}} 
+  
+    {{form_row(formchantiers.DateDebut)}} 
+    
+  
+
+      <button type="submit" class="btn btn-info" >Enregistrer</button>
+ <a  href="{{path('crud_chantiers')}}" class="btn btn-warning" >Retour</button></a>
+
+    {{form_end(formchantiers)}}
+  
+</div>
+{% endblock %}
+

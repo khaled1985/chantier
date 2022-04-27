@@ -1,0 +1,73 @@
+
+{% extends "base.html.twig" %}
+ {% block mysteel %} 
+ 	<style>table, th, td {
+  border: 1px solid black;
+}</style> 
+
+{% endblock %}
+{% block body%} 
+<div class="col-md-12" style="margin-top:50px">
+
+<h1>Consultaion listes Utilisateurs</h1>
+<a  href="{{path('ajout')}}" class="btn btn-success" >Ajout Utilisateur</button></a>
+<table style="border: 1px solid black ;width:100%;text-align:center;cellspacing:1px;background-color:silver">
+	 
+	<thead>
+		<tr  >
+			<th>nom</th>
+			<th>prenom</th>
+			<th>matricule</th>
+				<th>Action</th>
+		 
+		</tr>
+	</thead>
+	 
+
+	<tbody>
+{% if properties %}
+ {% for etudiant in properties%}
+ 	<tr id="{{etudiant.Id}}" >
+<td >{{etudiant.nom}} </td>
+<td>{{etudiant.prenom}} </td>
+<td >{{etudiant.matricule}} </td>
+ <td><a  href="{{path('update_etudiant',{'id':etudiant.Id})}}" class="btn btn-warning" >Update</button></a>
+	<a  href="{{path('delete_etudiant',{'id':etudiant.Id})}}" class="btn btn-danger" >Delete</button></a>
+ 
+</td>
+ 
+</tr>
+
+
+
+ {% endfor %}
+{% else %}
+
+	<tr   >
+<td colspan="4">Aucun Enregistrement</td>
+ 
+</tr>
+
+
+ {% endif %}
+
+</tbody>
+
+</table>
+<div class="navigation container col-md-12">
+    {{ knp_pagination_render(properties) }}
+</div>
+</div>
+ <br>
+ <br>
+<div id="show"  class="col-md-12">
+
+</div>
+
+
+{% endblock %}
+
+ {% block javascriptsfunction %}
+ 		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script> 
+ 
+ {% endblock %}
